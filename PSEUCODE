@@ -1,0 +1,28 @@
+Function create_behavior_tree():
+    Create Root Node as Selector
+    Add Sequence Node for Battery Check and Recharge
+        Add Condition Node: Is Battery Low?
+        Add Action Node: Recharge Battery
+    Add Sequence Node for Obstacle Avoidance
+        Add Condition Node: Is Obstacle Detected?
+        Add Action Node: Avoid Obstacle
+    Add Action Node: Move to Goal
+    Return Root Node
+
+Function main():
+    behavior_tree = create_behavior_tree()
+    Print Behavior Tree Structure
+
+    # Simulate Successful Mode
+    Set Avoid Obstacle Node to Success Mode
+    For Tick in 1 to 3:
+        Print "Tick #"
+        Tick Behavior Tree
+        Wait 2 Seconds
+
+    # Switch to Failure Mode for Demonstration
+    Set Avoid Obstacle Node to Failure Mode
+    For Tick in 4 to 8:
+        Print "Tick #"
+        Tick Behavior Tree
+        Wait 2 Seconds
